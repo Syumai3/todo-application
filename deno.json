@@ -1,0 +1,11 @@
+{
+  "deploy": {
+    "project": "0be1df05-42ca-45eb-b06b-ddaf57398f26",
+    "exclude": [],
+    "include": [
+      "dist",
+      "server.ts"
+    ],
+    "entrypoint": "server.ts"
+  }
+}
