@@ -12,7 +12,7 @@ const todoListMock: Todo[] = [
 ];
 
 function App() {
-  const [todoList, setTodoList] = useState(todoListMock);
+  const [todoList] = useState(todoListMock);
   return (
     <>
       <h1>TODOリスト</h1>
