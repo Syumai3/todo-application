@@ -1,12 +1,17 @@
 import { ComponentProps, useState } from "react";
 
-type Props = {};
+type Props = {
+  onAddTodo: (title: string) => void;
+};
 
-export function InputTodo({}: Props) {
+export function InputTodo({ onAddTodo }: Props) {
   const [input, setInput] = useState("");
 
   const handleClick = () => {
-    console.log(input);
+    if (input.trim() !== "") {
+      onAddTodo(input);
+      setInput("");
+    }
   };
 
   const handleChangeInput: ComponentProps<"input">["onChange"] = (event) => {
